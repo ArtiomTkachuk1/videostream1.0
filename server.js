@@ -23,7 +23,6 @@ function sendChunk(path,req,res){
     }
 
     const chunksize = (end-start)+1
-    console.log(chunksize)
     const file = fs.createReadStream(path, {start, end})
     const head = {
       'Content-Range' : `bytes ${start}-${end}/${fileSize}`,
