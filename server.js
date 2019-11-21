@@ -45,15 +45,11 @@ function sendChunk(path,req,res){
   }
 }
 
-app.get('/video1', function(req, res) {
-  let path = 'assets/chunk1.mp4'
+app.get('/video/:chunknum', function(req, res) {
+  let path = 'assets/chunk'+req.params.chunknum+'.mp4'
   sendChunk(path,req,res)
 })
 
-app.get('/video2', function(req, res) {
-  let path = 'assets/chunk2.mp4'
-  sendChunk(path,req,res)
-})
 
 app.listen(3000, function () {
   console.log('Listening on port 3000!')

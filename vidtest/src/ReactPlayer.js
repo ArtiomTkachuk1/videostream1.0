@@ -3,18 +3,20 @@ import ReactPlayer from 'react-player'
 export default class RP extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { url: 'http://localhost:3000/video1' };
+    this.pathbase='http://localhost:3000/video/'
+    this.state = {chunknum : 1};
   }
   ChunkRootUpdater=()=>{
-      if(this.state.url!=="http://localhost:3000/video2"){
+      if(this.props.chunk_max>this.state.chunknum){
         this.setState({
-          url:"http://localhost:3000/video2"
+          chunknum:this.state.chunknum+1
         })
       }
   }
   render(){
+    let URL=this.pathbase+this.state.chunknum
     return (
-      <ReactPlayer url={this.state.url} playing={true} muted={true}
+      <ReactPlayer url={URL} playing={true} muted={true}
           onEnded={
             () =>this.ChunkRootUpdater()
           }

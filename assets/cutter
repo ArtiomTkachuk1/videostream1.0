@@ -1,0 +1,6 @@
+ffmpeg -i source.mp4 -ss 00:00:00 -t 00:00:05 -c copy chunk1.mp4;
+ffmpeg -i source.mp4 -ss 00:00:05 -t 00:00:05 -c copy chunk2.mp4;
+ffmpeg -i source.mp4 -ss 00:00:10 -t 00:00:05 -c copy chunk3.mp4;
+ffmpeg -i source.mp4 -ss 00:00:15 -t 00:00:05 -c copy chunk4.mp4;
+ffmpeg -i source.mp4 -ss 00:00:20 -t 00:00:05 -c copy chunk5.mp4;
+ffmpeg -i source.mp4 -ss 00:00:25 -t 00:00:05 -c copy chunk6.mp4;
