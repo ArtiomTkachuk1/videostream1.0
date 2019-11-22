@@ -6,7 +6,7 @@ export default class RP extends React.Component {
     this.pathbase='http://localhost:3000/video/'
     this.state = {chunknum : 1};
   }
-  
+
   ChunkRootUpdater=()=>{
       if(this.props.chunk_max>this.state.chunknum){
         this.setState({
@@ -17,14 +17,17 @@ export default class RP extends React.Component {
   render(){
     let URL=this.pathbase+this.state.chunknum
     return (
-      <ReactPlayer
-          url={URL}
-          playing={true}
-          muted={true}
-          onEnded={
-            () =>this.ChunkRootUpdater()
-          }
-      />
+      <React.Fragment>
+        React player
+        <ReactPlayer
+            url={URL}
+            playing={true}
+            muted={true}
+            onEnded={
+              () =>this.ChunkRootUpdater()
+            }
+        />
+      </React.Fragment>
     )
   }
 }

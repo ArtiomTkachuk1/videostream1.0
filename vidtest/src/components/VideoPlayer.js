@@ -21,11 +21,14 @@ export default class VideoPlayer extends React.Component {
   // see https://github.com/videojs/video.js/pull/3856
   render() {
     return (
-      <div>
-        <div data-vjs-player>
-          <video ref={ node => this.videoNode = node } className="video-js"></video>
+      <React.Fragment>
+        VideoPlayer
+        <div>
+          <div data-vjs-player>
+            <video ref={ node => this.videoNode = node } className="video-js"></video>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }

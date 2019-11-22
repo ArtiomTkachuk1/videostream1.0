@@ -16,14 +16,12 @@ export default class Video extends React.Component {
   render(){
     let URL=this.pathbase+this.state.chunknum
     return (
-      <video
+      <React.Fragment>
+        Videotag
+        <video
           src={URL}
-          playing={true}
-          muted={true}
-          onEnded={
-            ()=>this.ChunkRootUpdater()
-          }
-      />
+        />
+      </React.Fragment>
     )
   }
 }
