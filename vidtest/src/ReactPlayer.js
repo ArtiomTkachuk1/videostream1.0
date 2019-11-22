@@ -11,12 +11,15 @@ export default class RP extends React.Component {
         this.setState({
           chunknum:this.state.chunknum+1
         })
-      }
+    }
   }
   render(){
     let URL=this.pathbase+this.state.chunknum
     return (
-      <ReactPlayer url={URL} playing={true} muted={true}
+      <ReactPlayer
+          url={URL}
+          playing={true}
+          muted={true}
           onEnded={
             () =>this.ChunkRootUpdater()
           }
