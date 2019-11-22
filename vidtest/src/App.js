@@ -1,25 +1,7 @@
 import React, { Component } from 'react'
-import RP from './ReactPlayer'
-import VideoPlayer from './VideoPlayer'
-
-class App extends Component{
-
-  render(){
-    return(
-      <React.Fragment>
-        <div>"kra1"</div>
-        <RP
-          chunk_max={6}
-        />
-      </React.Fragment>
-    )
-  }
-}
-
-export default App;
-
-
-/*
+import RP from '.components/ReactPlayer'
+import Video from '.components/Video'
+import VideoPlayer from '.components/VideoPlayer'
 
 const videoJsOptions = {
   autoplay: true,
@@ -31,5 +13,27 @@ const videoJsOptions = {
   }]
 }
 
-<div>"kra2"</div>
-<VideoPlayer {...videoJsOptions}/>*/
+
+class App extends Component{
+
+  render(){
+    return(
+      <React.Fragment>
+        React player
+        <RP
+          chunk_max={6}
+        />
+        Videotag
+        <Video
+          chunk_max={6}
+        />
+        videojs
+        <VideoPlayer
+          {...videoJsOptions}
+        />
+      </React.Fragment>
+    )
+  }
+}
+
+export default App;\
