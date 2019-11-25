@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
-import RP from './components/ReactPlayer'
-import Video from './components/Video'
-import VideoPlayer from './components/VideoPlayer'
+import RP from './components/ReactPlayer/ReactPlayer'
+import VideoTag from './components/VideoTag/VideoTagv1'
+import VideojsPlayer from './components/VideojsPlayer/VideojsPlayer'
 
-const videoJsOptions = {
-  autoplay: true,
-  muted: true,
-  controls: true,
-  sources: [{
-    src: 'http://localhost:3000/video/1',
-    type: 'video/mp4'
-  }]
-}
+
 
 
 class App extends Component{
@@ -22,13 +14,11 @@ class App extends Component{
         <RP
           chunk_max={6}
         />
-        Videotag
-        <Video
+        <VideoTag
           chunk_max={6}
         />
-        videojs
-        <VideoPlayer
-          {...videoJsOptions}
+        <VideojsPlayer
+          chunk_max={6}
         />
       </React.Fragment>
     )
@@ -36,3 +26,5 @@ class App extends Component{
 }
 
 export default App;
+
+/**/
