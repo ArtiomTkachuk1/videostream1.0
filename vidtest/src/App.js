@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RP from './components/ReactPlayer/ReactPlayer'
-import VideoTag from './components/VideoTag/VideoTagv1'
+import VideoTag from './components/VideoTag/VideoTagv0'
 import VideojsPlayer from './components/VideojsPlayer/VideojsPlayer'
 
 
@@ -17,9 +17,6 @@ class App extends Component{
         <VideoTag
           chunk_max={6}
         />
-        <VideojsPlayer
-          chunk_max={6}
-        />
       </React.Fragment>
     )
   }
@@ -27,4 +24,8 @@ class App extends Component{
 
 export default App;
 
-/**/
+/*
+<VideojsPlayer
+  chunk_max={6}
+/>
+*/
