@@ -18,8 +18,23 @@ export default class VideoTag extends React.Component {
     let src = this.pathbase + this.state.chunknum
     return (
       <React.Fragment>
-        Videotag
+        <h1
+        style={{
+              justifyContent:"center",
+              display:"flex",
+              margin:"auto",
+            }}
+        >
+          Video tag
+        </h1>
         <video
+        style={{
+              width:"30%",
+              height:"20%",
+              display:"flex",
+              margin:"auto",
+              backgroundColor:"black",
+            }}
           autoPlay
           muted
           src={src}

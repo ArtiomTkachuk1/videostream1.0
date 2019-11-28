@@ -18,8 +18,23 @@ export default class RP extends React.Component {
     let URL=this.pathbase+this.state.chunknum
     return (
       <React.Fragment>
-        React player
+        <h1
+        style={{
+              justifyContent:"center",
+              display:"flex",
+              margin:"auto",
+            }}
+        >
+          React player
+        </h1>
         <ReactPlayer
+          style={{
+  							width:"120%",
+  							height:"80%",
+  							display:"flex",
+  							margin:"auto",
+  							backgroundColor:"black",
+  						}}
             url={URL}
             playing={true}
             muted={true}
