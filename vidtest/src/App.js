@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RP from './components/ReactPlayer/ReactPlayer'
-import VideoTag from './components/VideoTag/VideoTagv1'
+import VideoTag from './components/VideoTag/VideoTagv0'
 import VideojsPlayer from './components/VideojsPlayer/VideojsPlayer'
 
 
