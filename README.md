@@ -1,4 +1,4 @@
-# videostream1.0
+# videostream 1.0
 
 Test video streaming from chunk's files for different players
 
