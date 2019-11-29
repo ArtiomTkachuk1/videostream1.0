@@ -25,7 +25,7 @@ function sendChunk(path,req,res){
     const chunksize = (end-start)+1
     const file = fs.createReadStream(path, {start, end})
     const head = {
-      'Access-Control-Allow-Origin': *
+      'Access-Control-Allow-Origin': '*',
       'Content-Range' : `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges' : 'bytes',
       'Content-Length': chunksize,
